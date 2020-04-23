@@ -1,0 +1,57 @@
+a {
+  color: #00B7FF;
+}
+
+.masthead {
+  background: url(/images/background2.jpg);
+  background-size: cover;
+  overflow: hidden;
+  color: #fff;
+  position: relative;
+  width: 100%;
+}
+
+.masthead2 {
+	background: url(/images/bg-masthead.jpg);
+	background-size: cover;
+	overflow: hidden;
+	color: #fff;
+	position: relative;
+	width: 100%;
+  }
+
+.select1 {
+	background: transparent;
+	font-size: 14px;
+	line-height: 25px;
+	border: 0;
+	border-radius: 4px;
+	height: 46px;
+	border: 1px solid #ececec;
+	color: #495057;
+	padding: 10px 20px;
+	z-index: 1;
+	width: 100%;
+	position: relative;
+	appearance: none;
+}
+
+.head-title {
+	color: rgb(14, 3, 3);
+	position: relative;
+}
+
+.input-material2 {
+	width: 100%;
+	border: 1px solid #ececec;
+}
+
+.carousel-item {
+	height: 80vh;
+	min-height: 350px;
+	background: no-repeat center center scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+  }

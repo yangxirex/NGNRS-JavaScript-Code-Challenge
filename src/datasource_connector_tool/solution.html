@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fancy Form</title>
+
+    <!-- You may add more stuff here -->
+    <script src=""></script>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <script>
+        var prices = new Array();
+        class Price {
+            constructor(buy, sell, id, pair, timestamp) {
+                this.buy = buy;
+                this.sell = sell;
+                this.id = id;
+                this.pair = pair;
+                this.timestamp = timestamp;
+            }
+
+            mid() {
+                return (this.buy + this.sell) / 2.0;
+            }
+
+            quote() {
+                return this.pair.slice(this.pair.length - 3);
+            }
+        }
+        fetch('https://static.ngnrs.io/test/prices')
+            .then(res => res.json())
+            .then((out) => {
+                list = out.data.prices;
+                for (var i = 0; i < list.length; i++) {
+                    prices.push(new Price(list[i].buy, list[i].sell, list[i].id, list[i].pair, list[i].timestamp))
+                }
+                for (var i = 0; i < prices.length; i++) {
+                    console.log(`Mid price for ${prices[i].pair} is ${prices[i].mid()} ${prices[i].quote()}.`);
+                }
+            }).catch(err => console.error(err))
+    </script>
+</body>
+
+
+</html>
